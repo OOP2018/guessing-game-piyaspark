@@ -1,6 +1,7 @@
 /**
  * The class that automatically solve the guessing game.
  *
+ * @author Piyaphol Wiengperm
  */
 public class GameSolver extends NumberGame{
     /**
