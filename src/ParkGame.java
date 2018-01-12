@@ -22,7 +22,11 @@ public class ParkGame extends NumberGame{
        super.setMessage("I'm thinking of a number between 1 and "+upperBound);
    }
 
-   @Override
+    /**
+     * check the number that user guess whether it is correct.
+     * @return boolean
+     */
+    @Override
    public boolean guess(int number){
        guesses += 1;
        if (number < 1 || number > upperBound)super.setMessage("The number you guessed is out of bound.");
