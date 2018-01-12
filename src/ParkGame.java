@@ -1,13 +1,19 @@
 import java.util.Random;
 
 /**
- * Game of guessing a secret number between 1 to the random upperbound.
+ * Game of guessing a secret number between 1 and upper bound.
+ * @author Piyaphol Wiengperm
+ *
  */
 public class ParkGame extends NumberGame{
    private int upperBound;
    private int secret;
    private int guesses;
 
+   /**
+    * Initialize a new game
+    * @param upperBound is the max value for the secret number that more than 1.
+    */
    public ParkGame(int  upperBound){
        this.upperBound = upperBound;
        long seed = System.nanoTime();
