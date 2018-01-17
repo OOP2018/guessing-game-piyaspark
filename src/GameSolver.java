@@ -14,14 +14,16 @@ public class GameSolver extends NumberGame{
         System.out.println( game.toString() );
         System.out.println( game.getMessage() );
 
-        int guess = game.getUpperBound();
+        int guess = game.getUpperBound()/2;
+        int floor = 1;int ceil = game.getUpperBound();
 
         while(true){
             boolean correct = game.guess(guess);
             if(correct == true)break;
             if(correct == false){
-                if(game.getMessage().contains("too small."))guess += 3;
-                if(game.getMessage().contains("too large."))guess -= 5;
+                if(game.getMessage().contains("small."))floor = guess;
+                if(game.getMessage().contains("large."))ceil = guess;
+                guess = (ceil-floor)/2 + floor;
                 continue;
             }
             }
