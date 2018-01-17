@@ -2,7 +2,7 @@ import java.util.Random;
 
 /**
  * Game of guessing a secret number between 1 and upper bound.
- * @author Piyaphol Wiengperm
+ * @author Piyaphol Wiengperm.
  *
  */
 public class ParkGame extends NumberGame{
@@ -11,7 +11,7 @@ public class ParkGame extends NumberGame{
    private int guesses;
 
    /**
-    * Initialize a new game
+    * Initialize a new game.
     * @param upperBound is the max value for the secret number that more than 1.
     */
    public ParkGame(int  upperBound){
@@ -24,7 +24,7 @@ public class ParkGame extends NumberGame{
 
     /**
      * check the number that user guess whether it is correct.
-     * @return boolean
+     * @return boolean.
      */
     @Override
    public boolean guess(int number){
@@ -39,14 +39,26 @@ public class ParkGame extends NumberGame{
        return false;
    }
 
+    /**
+     * return the upper bound of number.
+     * @return upperBound.
+     */
    @Override
    public int getUpperBound(){ return upperBound; }
 
+    /**
+     * a concept of the game.
+     * @return String.
+     */
    @Override
    public String toString(){
        return "Try to guess what secret number is.";
    }
 
+    /**
+     * count the number of guesses and return.
+     * @return guesses.
+     */
    @Override
    public int getCount(){
        return guesses;
