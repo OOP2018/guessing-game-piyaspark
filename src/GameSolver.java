@@ -11,9 +11,6 @@ public class GameSolver extends NumberGame{
      */
     public int play(NumberGame game) {
 
-        System.out.println( game.toString() );
-        System.out.println( game.getMessage() );
-
         int guess = game.getUpperBound()/2;
         int floor = 1;int ceil = game.getUpperBound();
 
